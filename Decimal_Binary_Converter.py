@@ -1,4 +1,4 @@
-#!/home/derickson/Projects/SpongeBob/Number\ to\ Binary\ Converter.py
+#!/usr/bin/env python3
 
 def Contain_Characters(input_string):
     current_index = 0
