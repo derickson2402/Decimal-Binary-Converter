@@ -70,8 +70,6 @@ def Make_Output_Readable(Input, Input_type):
             iteration+=1
         if((length-iteration*4)>0):
             Running_Output = Input[0:length-(iteration*3)]+","+Running_Output
-    else:
-        exit("There was an error recieving an input type for the Make_Output_Readable function")
     return(Running_Output)
 
 print("\n"*100, "This program will take a Binary number and convert it to Decimal,")
@@ -82,7 +80,7 @@ Program_Running = True
 while(Program_Running == True):
     Convert_type = Collect_Conversion_Type(input("Would you like to convert 1) Binary to Decimal or 2) Decimal to Binary?\n\n"))
     Value_To_Convert = Collect_Number(input("\nPlease enter your number below:\n\n"))
-    print("\nYour new value in ",("Binary" if Convert_type == "Type Bin to Dec" else "Decimal"),"is:",Make_Output_Readable(Convert_Number(Value_To_Convert,Convert_type),Convert_type),end='\n\n')
+    print("\nYour new value in",("Binary" if Convert_type == "Type Dec to Bin" else "Decimal"),"is:",Make_Output_Readable(Convert_Number(Value_To_Convert,Convert_type),Convert_type), end='\n\n')
     foo = input("Would you like to convert another number? Yes or No?\n\n")
     print(end='\n')
     if("y" in(foo.lower())):
